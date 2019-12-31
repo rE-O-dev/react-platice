@@ -61,17 +61,11 @@ class PhoneInfo extends Component {
     }
 
     render() {
-        const style = {
-            border: '1px solid black',
-            padding: '8px',
-            margin: '8px'
-        };
-
         const { editing } = this.state;
         
         if(editing) {
             return (
-                <div style={style}>
+                <div className="phone-info">
                     <div>
                         <input
                             value={this.state.name}
@@ -98,7 +92,7 @@ class PhoneInfo extends Component {
         } = this.props.info;
 
         return (
-            <div style={style}>
+            <div className="phone-info">
                 <div><b>{name}</b></div>
                 <div>{phone}</div>
                 <button onClick={this.handleToggleEdit}>수정</button>
